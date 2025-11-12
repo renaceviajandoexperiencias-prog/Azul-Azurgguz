@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azul Azurgguz - Retiro de Yoga en Marruecos 9-15 Febrero 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #2c1810;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: white;
+            padding: 100px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(218, 165, 32, 0.2), transparent);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-date {
+            display: inline-block;
+            background: rgba(218, 165, 32, 0.3);
+            border: 2px solid #DAA520;
+            color: #DAA520;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .hero-hook {
+            font-size: 1.4em;
+            max-width: 700px;
+            margin: 30px auto;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: white;
+            color: #8B4513;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-top: 30px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            background: #FFE4B5;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 30px;
+        }
+        
+        .story-section {
+            background: linear-gradient(to bottom, #FFF8DC, #F5DEB3);
+        }
+        
+        .story-section h2 {
+            font-size: 2.8em;
+            color: #8B4513;
+            margin-bottom: 40px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        .story-text {
+            font-size: 1.2em;
+            line-height: 2;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .story-text strong {
+            color: #8B4513;
+            font-weight: 600;
+        }
+        
+        .emotional-highlight {
+            background: white;
+            border-left: 5px solid #CD853F;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 750px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1);
+        }
+        
+        .emotional-highlight p {
+            font-size: 1.15em;
+            color: #666;
+            line-height: 1.9;
+            font-style: italic;
+        }
+        
+        .journey-section {
+            background: white;
+        }
+        
+        .journey-section h2 {
+            font-size: 2.8em;
+            color: #8B4513;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .day-story {
+            background: #FFF8DC;
+            border-left: 5px solid #CD853F;
+            padding: 35px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.1);
+        }
+        
+        .day-story h3 {
+            color: #8B4513;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        
+        .day-story p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+        
+        .yoga-moment {
+            background: rgba(205, 133, 63, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 3px solid #DAA520;
+        }
+        
+        .yoga-moment h5 {
+            color: #8B4513;
+            font-size: 1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .yoga-moment p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .highlight-day {
+            background: linear-gradient(135deg, #FFE4B5, #FFDAB9);
+            border-left: 5px solid #DAA520;
+        }
+        
+        .transformation-section {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+        }
+        
+        .transformation-section h2 {
+            font-size: 2.8em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #DAA520;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .benefit-card {
+            background: rgba(218, 165, 32, 0.15);
+            border: 2px solid #DAA520;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .benefit-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-card h4 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-card p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(to bottom, #F5DEB3, #FFF8DC);
+        }
+        
+        .pricing-section h2 {
+            font-size: 2.8em;
+            color: #8B4513;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .price-box {
+            background: white;
+            border: 4px solid #CD853F;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.2);
+        }
+        
+        .price-early {
+            font-size: 4.5em;
+            font-weight: 900;
+            color: #8B4513;
+            margin: 20px 0;
+        }
+        
+        .price-regular {
+            font-size: 1.4em;
+            text-decoration: line-through;
+            opacity: 0.5;
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .urgency-box {
+            background: rgba(205, 133, 63, 0.1);
+            border: 2px solid #CD853F;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .urgency-box p {
+            font-size: 1.15em;
+            color: #8B4513;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .form-section {
+            background: linear-gradient(135deg, #CD853F 0%, #DAA520 100%);
+            color: white;
+            padding: 100px 30px;
+        }
+        
+        .form-section h2 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-subtitle {
+            font-size: 1.3em;
+            text-align: center;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #8B4513;
+            font-size: 1.1em;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1.05em;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+        
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #CD853F;
+            box-shadow: 0 0 0 3px rgba(205, 133, 63, 0.1);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #8B4513, #CD853F);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.5);
+        }
+        
+        .trust-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #999;
+        }
+        
+        .rosa-section {
+            background: white;
+            padding: 80px 30px;
+        }
+        
+        .rosa-section h2 {
+            font-size: 2.8em;
+            color: #8B4513;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .rosa-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #FFF8DC;
+            padding: 50px;
+            border-radius: 15px;
+            border-left: 5px solid #CD853F;
+        }
+        
+        .rosa-content h3 {
+            color: #8B4513;
+            font-size: 2em;
+            margin-bottom: 25px;
+        }
+        
+        .rosa-content p {
+            color: #555;
+            font-size: 1.15em;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+        
+        .quote-section {
+            background: #8B4513;
+            color: white;
+            padding: 80px 30px;
+            text-align: center;
+            font-size: 2em;
+            font-style: italic;
+            font-weight: 300;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            section {
+                padding: 50px 20px;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-date">📅 9 - 15 FEBRERO 2025</div>
+            <h1>✨ AZUL AZURGGUZ ✨</h1>
+            <p class="hero-subtitle">Retiro del Alma Libre en el Corazón de Marruecos</p>
+            <p class="hero-hook">¿Cuándo fue la última vez que respiraste de verdad? ¿Que sentiste tu cuerpo VIVO y tu mente en PAZ?</p>
+            <a href="#reserva" class="cta-button">🌟 QUIERO RESERVAR MI LUGAR</a>
+        </div>
+    </section>
+    
+    <!-- STORY SECTION -->
+    <section class="story-section">
+        <div class="container">
+            <h2>Te Despiertas. Trabajas. Cumples. Duermes. Repites.</h2>
+            
+            <div class="story-text">
+                <p>Pero por dentro, algo te dice que <strong>la vida es más que esto</strong>.</p>
+                
+                <p>Llevas meses (¿o años?) prometiéndote que vas a parar. Que vas a cuidarte. Que vas a encontrar ese tiempo para ti.</p>
+                
+                <p>Pero siempre hay algo más urgente. Siempre hay una razón para esperar.</p>
+            </div>
+            
+            <div class="emotional-highlight">
+                <p>"¿Y si este año es diferente? ¿Y si en lugar de esperar a estar lista, simplemente empiezas?"</p>
+            </div>
+            
+            <div class="story-text">
+                <p>Imagina despertar en un riad marroquí, con el aroma del té de menta flotando en el aire. Tu esterilla te espera en una terraza con vistas a la Medina milenaria.</p>
+                
+                <p>Imagina practicar yoga al amanecer <strong>en medio del desierto del Sahara</strong>, con las dunas doradas extendiéndose hasta el infinito.</p>
+                
+                <p>Imagina dormir bajo <strong>millones de estrellas</strong> que nunca viste, sin el ruido de notificaciones, sin las obligaciones de siempre.</p>
+                
+                <p><strong>Imagina regresar siendo TÚ de nuevo.</strong> Más fuerte. Más clara. Más conectada.</p>
+            </div>
+            
+            <a href="#reserva" class="cta-button">✨ SÍ, QUIERO VIVIR ESTO</a>
+        </div>
+    </section>
+    
+    <!-- JOURNEY SECTION -->
+    <section class="journey-section">
+        <div class="container">
+            <h2>7 Días Que Cambiarán Tu Vida</h2>
+            
+            <div class="day-story">
+                <h3>Día 1: El Despertar</h3>
+                <p>Llegas a Marrakech. El caos organizado de la Medina te envuelve: colores, aromas, sonidos que nunca experimentaste. Sientes que algo dentro de ti ya está cambiando.</p>
+                
+                <div class="yoga-moment">
+                    <h5>🧘 TU MOMENTO YOGA</h5>
+                    <p>Primera práctica al atardecer en la terraza del riad. Yoga suave para soltar las tensiones del viaje. Meditación para abrir tu corazón a esta aventura. Estableces tu intención para estos 7 días.</p>
+                </div>
+            </div>
+            
+            <div class="day-story">
+                <h3>Día 2: La Montaña Sagrada</h3>
+                <p>Cruzas el Alto Atlas, montañas que tocan el cielo a más de 2.200 metros. Paradas en pueblos bereberes donde el tiempo se detuvo. Visitas <strong>Ait Benhaddou</strong>, un ksar de película (literalmente - aquí filmaron Juego de Tronos y Gladiator). Sientes la historia en cada piedra.</p>
+                
+                <div class="yoga-moment">
+                    <h5>🧘 TU MOMENTO YOGA</h5>
+                    <p>Yoga energizante al amanecer para preparar tu cuerpo. Yoga restaurativo al llegar al Valle de Dades, rodeada de montañas rojizas. Meditación conectando con la energía ancestral de las montañas.</p>
+                </div>
+            </div>
+            
+            <div class="day-story">
+                <h3>Día 3: Las Gargantas y las Puertas del Desierto</h3>
+                <p>Caminas entre las <strong>Gargantas de Todra</strong> - paredes de roca de 300 metros que te hacen sentir diminuta y poderosa al mismo tiempo. Llegas a las puertas del Sahara. Las primeras dunas aparecen en el horizonte. Tu corazón late más fuerte.</p>
+                
+                <div class="yoga-moment">
+                    <h5>🧘 TU MOMENTO YOGA</h5>
+                    <p>Yoga al atardecer CON LAS DUNAS DE FONDO. El sol tiñe todo de oro. Practicas entre arena y silencio. Esta es una de esas imágenes que llevarás en tu mente para siempre.</p>
+                </div>
+            </div>
+            
+            <div class="day-story highlight-day">
+                <h3>Día 4: El Corazón del Sahara 🌅</h3>
+                <p>Hoy es EL DÍA. Te despiertas antes del alba. Escalas una duna. Y ahí, en la cima, presencias el amanecer más hermoso de tu vida. El Sahara se despierta contigo.</p>
+                
+                <p style="margin-top: 20px;">Pasas el día explorando: música gnawa hipnótica en pueblo Khamlia, té con familias nómadas que viven en el desierto hace generaciones, historias que te cambian la perspectiva.</p>
+                
+                <p style="margin-top: 20px;">Al atardecer, <strong>montas en dromedario</strong> y te adentras en las dunas infinitas. El cielo explota en tonos naranjas y rosas. Llegas al campamento bereber donde dormirás bajo las estrellas más brillantes que verás en tu vida.</p>
+                
+                <div class="yoga-moment">
+                    <h5>🧘 TU MOMENTO YOGA</h5>
+                    <p>Saludo al sol EN LA CIMA DE UNA DUNA al amanecer. Yoga Nidra (yoga del sueño) bajo las estrellas del Sahara por la noche. Meditación silenciosa conectando con la inmensidad del desierto. Momento cumbre de todo el retiro.</p>
+                </div>
+            </div>
+            
+            <div class="day-story">
+                <h3>Día 5: El Camino de Regreso</h3>
+                <p>Última meditación en el desierto al amanecer. Dices adiós al Sahara (pero él nunca te abandonará). Ruta por el Valle del Draa, infinitos palmerales verdes que contrastan con el desierto. Pueblos de kasbahs milenarias. Llegas a Ouarzazate, la "puerta del desierto".</p>
+                
+                <div class="yoga-moment">
+                    <h5>🧘 TU MOMENTO YOGA</h5>
+                    <p>Yin Yoga profundo al atardecer. Posturas largas de estiramiento. Trabajo de respiración para integrar todo lo vivido. Es momento de procesar internamente esta experiencia.</p>
+                </div>
+            </div>
+            
+            <div class="day-story">
+                <h3>Día 6: La Integración</h3>
+                <p>Regresas cruzando nuevamente el Alto Atlas. Las montañas te despiden. Llegas a Marrakech, pero ya no eres la misma persona que llegó hace 6 días. Lo sientes en tu respiración, en tu mirada, en tu piel.</p>
+                
+                <div class="yoga-moment">
+                    <h5>🧘 TU MOMENTO YOGA</h5>
+                    <p>Práctica integral al amanecer. Yoga de cierre al atardecer en el mismo lugar donde empezaste. Círculo de compartir: cada una expresa lo que este viaje significó. Lágrimas, risas, abrazos. Conexiones que perdurarán.</p>
+                </div>
+            </div>
+            
+            <div class="day-story">
+                <h3>Día 7: El Nuevo Comienzo</h3>
+                <p>Última práctica de yoga juntas. Visitas los <strong>Jardines Majorelle</strong>, ese oasis azul que Yves Saint Laurent amaba. Paseas por los souks, pero ahora los ves con otros ojos. Almuerzo de despedida. Abrazos que duelen porque no quieres que termine.</p>
+                
+                <p style="margin-top: 20px; font-style: italic; color: #CD853F;">Pero no termina. Esto es solo el comienzo de tu nueva vida.</p>
+            </div>
+            
+            <a href="#reserva" class="cta-button">💫 RESERVO MI TRANSFORMACIÓN AHORA</a>
+        </div>
+    </section>
+    
+    <!-- TRANSFORMATION SECTION -->
+    <section class="transformation-section">
+        <div class="container">
+            <h2>Lo Que Te Llevas (Más Allá del Viaje)</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧘</div>
+                    <h4>Práctica de Yoga Profundizada</h4>
+                    <p>12 sesiones completas: Hatha, Vinyasa, Yin, Yoga Nidra. En lugares que nunca imaginaste. Con una profesora que te ve. Sales con tu práctica transformada.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌅</div>
+                    <h4>Recuerdos que Te Sostienen</h4>
+                    <p>Amaneceres en el Sahara. Yoga entre dunas. Estrellas infinitas. Estos momentos se convierten en tu refugio mental cuando la vida se pone difícil.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h4>Confianza Renovada</h4>
+                    <p>Si pudiste con el desierto, puedes con todo. Regresas sabiendo que eres más fuerte y capaz de lo que creías.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">👭</div>
+                    <h4>Tu Nueva Tribu</h4>
+                    <p>Conexiones auténticas con mujeres que, como tú, eligieron priorizarse. Grupo privado para seguir apoyándose después del retiro.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <h4>Mente Clara</h4>
+                    <p>7 días sin ruido digital. Tu cerebro se resetea. Ideas nuevas emergen. Claridad sobre lo que realmente importa.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h4>Reconexión Contigo</h4>
+                    <p>Vuelves a sentirte TÚ. No la versión cansada y desconectada. La versión auténtica, viva, presente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- PRICING SECTION -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2>Tu Inversión (Mucho Menos de Lo Que Imaginas)</h2>
+            
+            <div class="price-box">
+                <h3 style="font-size: 1.5em; margin-bottom: 20px; color: #8B4513;">7 Días • 12 Sesiones Yoga • Experiencia Inolvidable</h3>
+                <p class="price-regular">Precio después del 30 nov: 1.020€</p>
+                <div class="price-early">890€</div>
+                <p style="font-size: 1.4em; color: #CD853F; font-weight: 600; margin-top: 15px;">🎁 PRECIO EARLY BIRD</p>
+                <p style="font-size: 1.1em; margin-top: 10px; color: #666;">Solo hasta el 30 de Noviembre • Ahorras 130€</p>
+                
+                <div class="urgency-box">
+                    <p>💳 Reserva con solo 100€ ahora</p>
+                    <p>💰 Resto se abona en destino (comodidad total)</p>
+                    <p style="margin-top: 15px; font-size: 1em; opacity: 0.8;">Incluye: Alojamiento premium • Todas las comidas (media pensión) • Transporte privado 4x4 • Guía español • 12 sesiones yoga • Dromedarios • Noche en desierto • Todas las visitas</p>
+                </div>
+                
+                <p style="margin-top: 30px; font-size: 1.15em; color: #8B4513; line-height: 1.8;">
+                    <strong>Piénsalo así:</strong> 890€ ÷ 7 días = 127€/día por una experiencia que cambiará tu vida entera.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ROSA SECTION -->
+    <section class="rosa-section">
+        <div class="container">
+            <h2>Conoce a Rosa - Tu Guía en Esta Aventura</h2>
+            
+            <div class="rosa-content">
+                <h3>El Alma de Renace Viajando Experiencias</h3>
+                <p>Hola, soy <strong>Rosa</strong>. Y quiero contarte por qué creé este retiro.</p>
+                
+                <p>Durante años viví en piloto automático. Trabajaba, cumplía, funcionaba... pero por dentro me sentía vacía. Hasta que un día dije BASTA y me fui a Marruecos.</p>
+                
+                <p>Ese viaje me cambió. No porque fuera perfecto o Instagrameable. Sino porque por primera vez en años, <strong>me sentí VIVA</strong>.</p>
+                
+                <p>Desde entonces, me he fascinado con entender <strong>por qué viajamos y cómo nos transforman las experiencias</strong>: por qué ciertos lugares nos cambian, cómo las vivencias auténticas nos reconectan con nosotros mismos, y por qué combinar yoga con aventura es la fórmula perfecta para despertar quien realmente eres.</p>
+                
+                <p style="background: rgba(205, 133, 63, 0.15); padding: 20px; border-left: 3px solid #CD853F; border-radius: 5px; margin-top: 25px;">
+                    <strong>Tu cerebro cambia cuando sales de tu zona de confort.</strong> Cuando practicas yoga en el desierto. Cuando duermes bajo estrellas que nunca viste. Cuando compartes té con nómadas. La dopamina, oxitocina y serotonina se disparan. Se crean nuevas conexiones neuronales. Literalmente, te conviertes en una versión mejorada de ti.
+                </p>
+                
+                <p style="margin-top: 25px; font-weight: 600; font-size: 1.15em; color: #8B4513;">
+                    Mi promesa: No te llevaré al Marruecos de postal. Te llevaré al Marruecos que SIENTE, que RESPIRA, que te DESAFÍA y te ABRAZA. Y caminaré cada paso contigo.
+                </p>
+                
+                <p style="margin-top: 20px; font-style: italic;">
+                    Porque la verdadera transformación no es solo lo que ves. Es <strong>quien te conviertes en el proceso</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FORM SECTION -->
+    <section class="form-section" id="reserva">
+        <div class="container">
+            <h2>🌟 Reserva Tu Lugar Ahora</h2>
+            <p class="form-subtitle">Solo 12 plazas disponibles • Ya quedan 7</p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">Tu Nombre *</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="¿Cómo te llamas?">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Tu Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Tu WhatsApp / Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="+34 600 000 000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">¿Qué te trae aquí? (opcional)</label>
+                    <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntame brevemente qué esperas de este retiro..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    ✨ SÍ, QUIERO MI LUGAR EN AZUL AZURGGUZ
+                </button>
+                
+                <p class="trust-text">
+                    🔒 Tu información está segura. Te contactaré en menos de 24h por WhatsApp para confirmar tu reserva y enviarte todos los detalles.
+                </p>
+            </form>
+        </div>
+    </section>
+    
+    <!-- QUOTE SECTION -->
+    <section class="quote-section">
+        <div class="container">
+            <p>"Aquellos que viven ven, pero los que viajan ven más"</p>
+            <p style="font-size: 0.6em; margin-top: 20px; font-style: normal; opacity: 0.8;">— Proverbio árabe</p>
+        </div>
+    </section>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Recoger datos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            // Construir mensaje para WhatsApp
+            let whatsappMessage = `🌟 *NUEVA RESERVA AZUL AZURGGUZ*%0A%0A`;
+            whatsappMessage += `👤 *Nombre:* ${encodeURIComponent(nombre)}%0A`;
+            whatsappMessage += `📧 *Email:* ${encodeURIComponent(email)}%0A`;
+            whatsappMessage += `📱 *Teléfono:* ${encodeURIComponent(telefono)}%0A`;
+            
+            if (mensaje.trim() !== '') {
+                whatsappMessage += `%0A💬 *Mensaje:*%0A${encodeURIComponent(mensaje)}%0A`;
+            }
+            
+            whatsappMessage += `%0A✅ Quiero reservar mi plaza para el retiro del 9-15 Feb`;
+            whatsappMessage += `%0A🎁 Precio Early Bird: 890€`;
+            
+            // Número de WhatsApp de Rosa
+            const numeroWhatsApp = '34623211438';
+            
+            // Abrir WhatsApp
+            const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${whatsappMessage}`;
+            window.open(whatsappURL, '_blank');
+            
+            // Opcional: Limpiar formulario después de enviar
+            // document.getElementById('contactForm').reset();
+        });
+        
+        // Smooth scroll para los botones CTA
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>uecos de postal. Te llevaré al Marr
